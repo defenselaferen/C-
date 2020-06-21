@@ -11,5 +11,6 @@ int getOption(){
 	cout << "============================" << endl;
 	cout << "Pilih [1-5] : ";
 	cin >> input;
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	return input;
 }
