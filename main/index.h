@@ -2,7 +2,7 @@ int main(int argc, char const *argv[])
 {
 	int pilihan = getOption();
 	char is_continue;
-	enum option{CREATE = 1, READ, UPDATE, FINISH};
+	enum option{CREATE = 1, READ, UPDATE, DELETE, FINISH};
 	while(pilihan != FINISH){
 		switch(pilihan){
 			case CREATE:
@@ -14,9 +14,11 @@ int main(int argc, char const *argv[])
 			case UPDATE:
 				cout << "Ubah data Mahasiswa" << endl;
 				break;
-			case FINISH:
+			case DELETE:
 				cout << "Hapus data Mahasiswa" << endl;
 				break;
+			case FINISH:
+				cout << "Press N To Finish This Program : " << endl;
 			default:
 				cout << "Pilihan Tidak Ditemukan" << endl;
 				break;
