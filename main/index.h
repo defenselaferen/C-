@@ -1,5 +1,8 @@
 int main(int argc, char const *argv[])
 {
+	fstream data;
+	checkDataBase(data);
+
 	int pilihan = getOption();
 	char is_continue;
 	enum option{CREATE = 1, READ, UPDATE, DELETE, FINISH};
@@ -7,9 +10,11 @@ int main(int argc, char const *argv[])
 		switch(pilihan){
 			case CREATE:
 				cout << "Menanbah data Mahasiswa" << endl;
+				addDataMahsiwa(data);
 				break;
 			case READ:
 				cout << "Tamplikan data Mahasiswa" << endl;
+				displayDataMahasiwa(data);
 				break;
 			case UPDATE:
 				cout << "Ubah data Mahasiswa" << endl;
@@ -17,8 +22,6 @@ int main(int argc, char const *argv[])
 			case DELETE:
 				cout << "Hapus data Mahasiswa" << endl;
 				break;
-			case FINISH:
-				cout << "Press N To Finish This Program : " << endl;
 			default:
 				cout << "Pilihan Tidak Ditemukan" << endl;
 				break;
