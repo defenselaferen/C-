@@ -18,9 +18,13 @@ int main(int argc, char const *argv[])
 				break;
 			case UPDATE:
 				cout << "Ubah data Mahasiswa" << endl;
+				updateRecord(data);
+				displayDataMahasiwa(data);
 				break;
 			case DELETE:
 				cout << "Hapus data Mahasiswa" << endl;
+				deleteRecord(data);
+				displayDataMahasiwa(data);
 				break;
 			default:
 				cout << "Pilihan Tidak Ditemukan" << endl;
